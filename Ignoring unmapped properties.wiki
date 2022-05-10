@@ -1,0 +1,6 @@
+= Ignoring unmapped properties from mapper struct =
+
+To ignore unmapped from mapper, this property should be added to _@Mapper_ annotation
+{{{
+unmappedTargetPolicy = ReportingPolicy.IGNORE
+}}}

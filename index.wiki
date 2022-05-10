@@ -3,4 +3,6 @@
 == Programming ==
 === Algorithms ===
 * [[Backtracking]] -- Algorithm for find all possible solutions from list.
-
+=== Java ===
+==== MapperStruct ====
+* [[Ignoring unmapped properties]] -- how to ignore unmapped properties to avoid warning?
