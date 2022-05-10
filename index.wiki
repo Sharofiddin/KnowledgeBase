@@ -1,0 +1,6 @@
+= 786/Knowledge Base =
+
+== Programming ==
+=== Algorithms ===
+* [[Backtracking]] -- Algorithm for find all possible solutions from list.
+
