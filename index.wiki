@@ -6,3 +6,7 @@
 === Java ===
 ==== MapperStruct ====
 * [[Ignoring unmapped properties]] -- how to ignore unmapped properties to avoid warning?
+== OS ==
+=== Ubuntu ===
+==== Jammy Jellyfish ====
+* [[Wayland problem with eclipse]] -- eclipse devstyle issue in Wayland.
