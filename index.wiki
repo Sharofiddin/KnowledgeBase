@@ -10,3 +10,7 @@
 === Ubuntu ===
 ==== Jammy Jellyfish ====
 * [[Wayland problem with eclipse]] -- eclipse devstyle issue in Wayland.
+==DB==
+===Postgresql===
+====Arrays====
+* [[Clear array]] -- How to remove all elements from array.
