@@ -1,0 +1,6 @@
+=Aliases=
+*get all java flags* <br/>
+{{{
+alias jflags='java -XX:+UnlockDiagnosticVMOptions -XX:+UnlockExperimentalVMOptions -XX:+PrintFlagsFinal  -version'
+}}}
+
