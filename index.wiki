@@ -11,6 +11,7 @@
 ==== Jammy Jellyfish ====
 * [[WaylandProblemWithEclipse]] -- eclipse devstyle issue in Wayland.
 * [[UsefulAliases]] -- some useful aliases these make your life easier ;)
+* [[SudoWithoutPassword]] -- Giving user grant to execute <b>sudo</b> commands without password 
 ==DB==
 ===Postgresql===
 ====Arrays====
