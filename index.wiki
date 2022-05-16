@@ -5,12 +5,14 @@
 * [[Backtracking]] -- Algorithm for find all possible solutions from list.
 === Java ===
 ==== MapperStruct ====
-* [[Ignoring unmapped properties]] -- how to ignore unmapped properties to avoid warning?
+* [[IgnoringUnmappedProperties]] -- how to ignore unmapped properties to avoid warning?
 == OS ==
 === Ubuntu ===
 ==== Jammy Jellyfish ====
-* [[Wayland problem with eclipse]] -- eclipse devstyle issue in Wayland.
+* [[WaylandProblemWithEclipse]] -- eclipse devstyle issue in Wayland.
 ==DB==
 ===Postgresql===
 ====Arrays====
-* [[Clear array]] -- How to remove all elements from array.
+* [[ClearArray]] -- How to remove all elements from array.
+== Books ==
+* [[JavaPerformance]] -- Java Performance By Scott Oaks (2nd edition)

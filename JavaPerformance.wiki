@@ -1,0 +1,6 @@
+=Java Performance=
+== 1.Introduction==
+* Q: What is a platform.<br/> 
+	A: In this book java platform is language features (like threading, synchronization) + Standard Java API features (like String handling)
+
+[[index]]
