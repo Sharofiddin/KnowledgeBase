@@ -3,18 +3,32 @@
 == Programming ==
 === Algorithms ===
 * [[Backtracking]] -- Algorithm for find all possible solutions from list.
+* [[BinarySearch]] -- Binary search algorithm.
 === Java ===
 ==== MapperStruct ====
 * [[IgnoringUnmappedProperties]] -- how to ignore unmapped properties to avoid warning?
+<hr/>
 == OS ==
 === Ubuntu ===
 ==== Jammy Jellyfish ====
 * [[WaylandProblemWithEclipse]] -- eclipse devstyle issue in Wayland.
 * [[UsefulAliases]] -- some useful aliases these make your life easier ;)
 * [[SudoWithoutPassword]] -- Giving user grant to execute <b>sudo</b> commands without password 
+<hr/>
 ==DB==
 ===Postgresql===
 ====Arrays====
 * [[ClearArray]] -- How to remove all elements from array.
+<hr/>
 == Books ==
 * [[JavaPerformance]] -- Java Performance By Scott Oaks (2nd edition)
+<hr/>
+== Servers ==
+=== Apache2 ===
+* [[ForbiddenFix]] -- How to fix forbidden error when creatinserver in custom location.
+<hr/>
+== Tools ==
+===Vim===
+* [[GenerateHtmlForAllVimwiki]] -- How to generate for all of your vimwiki pages.
+
+

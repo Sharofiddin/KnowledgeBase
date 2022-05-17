@@ -1,0 +1,21 @@
+== Fixing Forbidden error in  apache server ==
+If you configure apache2 server on ubuntu for custom directory. Let's say <i>/home/user/my-site</i>.<br/>
+You highly likely get Forbidden error during accessing to your localhost. <br/>
+To fix this situation add following script to your <i>/etc/apache2/apache2.conf</i>
+{{{
+<Directory /home/user/my-site>
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>
+}}}
+for version = 2.4
+
+{{{
+ Order allow,deny
+Allow from all
+}}}
+
+for version = 2.2
+
+[[index]]
