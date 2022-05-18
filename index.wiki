@@ -28,6 +28,8 @@
 * [[ForbiddenFix]] -- How to fix forbidden error when creatinserver in custom location.
 <hr/>
 == Tools ==
+===Maven===
+* [[InstallJarToLocalRepo]] -- How to intsall jar files for only one project
 ===Vim===
 * [[GenerateHtmlForAllVimwiki]] -- How to generate for all of your vimwiki pages.
 

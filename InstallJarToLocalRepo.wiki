@@ -1,0 +1,6 @@
+= Install jars for local repo =
+To install jars as maven dependency for only one project and you don't want it to be installed to <i>.m2</i>.<br/> Run following:
+{{{
+mvn deploy:deploy-file -Dfile=logmasker-log4j2-1.0.0-beta1.jar -DgroupId=com.ppopescu -DartifactId=logmasker-log4j2 -Dversion=1.0.0-beta1 -Durl=file://.
+}}}
+[[index]] -- HomePage
