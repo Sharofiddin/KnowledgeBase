@@ -1,0 +1,5 @@
+==Occams razor==
+In this method we will eliminate unlikely cases from content. <br/>
+Example:<i>"when you hear hoofbeats think horses, not zebras"</i>
+<br/>
+[[index]] -- HomePage

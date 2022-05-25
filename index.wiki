@@ -32,5 +32,5 @@
 * [[InstallJarToLocalRepo]] -- How to intsall jar files for only one project
 ===Vim===
 * [[GenerateHtmlForAllVimwiki]] -- How to generate for all of your vimwiki pages.
-
-
+==Methods==
+* [[OccamsRazor]] -- Simplest first.
