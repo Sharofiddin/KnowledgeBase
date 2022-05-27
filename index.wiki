@@ -19,6 +19,8 @@
 ===Postgresql===
 ====Arrays====
 * [[ClearArray]] -- How to remove all elements from array.
+====Json====
+* [[JsonPretty]] -- Pretty print for JSON and JSONB
 <hr/>
 == Books ==
 * [[JavaPerformance]] -- Java Performance By Scott Oaks (2nd edition)
