@@ -34,3 +34,7 @@
 * [[GenerateHtmlForAllVimwiki]] -- How to generate for all of your vimwiki pages.
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
+<hr/>
+
+==Must explore==
+[[SMTPAppender]] -- send logging errors by email to admins
