@@ -1,0 +1,3 @@
+== Long(full) package names in hierarchical package representation ==
+If you encountered this problem, it could be fixed by changing perspective to Java from JavaEE. </br>
+[[index]] -- HomePage

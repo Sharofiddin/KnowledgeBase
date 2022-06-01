@@ -1,0 +1,13 @@
+== JDBC getting generated keys ==
+If you use just
+	{{{
+		ResultSet#getGeneratedKeys
+	}}}
+	to get generated keys by insert or update (like autoincrement ids) some jdbc drivers won't return anything (like postgresql JDBC driver).</br>
+	Just add 
+	{{{
+	RETURNING <key>
+	}}}
+	at the end of your query and situation will be fixed In shaa Allah.
+	<br/>
+	[[index]] -- HomePage

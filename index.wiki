@@ -7,6 +7,7 @@
 === Java ===
 ==== MapperStruct ====
 * [[IgnoringUnmappedProperties]] -- how to ignore unmapped properties to avoid warning?
+* [[JDBCGeneratedKeys]] -- How to properly retrieve generated keys from jdbc.
 <hr/>
 == OS ==
 === Ubuntu ===
@@ -34,6 +35,9 @@
 * [[InstallJarToLocalRepo]] -- How to intsall jar files for only one project
 ===Vim===
 * [[GenerateHtmlForAllVimwiki]] -- How to generate for all of your vimwiki pages.
+* [[NotWorkingKeys]] -- Sometimes your keyboard just doesn't do what you order in vim or terminal.
+===Eclipse===
+* [[LongPackageNamesInHierarchical]] -- How to fix long package names even in hierarchical package representation;
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
 <hr/>

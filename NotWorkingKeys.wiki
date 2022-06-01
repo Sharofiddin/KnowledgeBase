@@ -1,0 +1,4 @@
+== Keys stopped working ==
+When your key bindings like <i>:w</i> or <i>CTRL+SHIFT+X</i> stopped working in terminal or vim it is highly likely your writing language has been switched to another from english.
+<br/>
+[[index]] -- HomePage
