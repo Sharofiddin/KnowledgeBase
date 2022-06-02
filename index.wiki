@@ -15,6 +15,7 @@
 * [[WaylandProblemWithEclipse]] -- eclipse devstyle issue in Wayland.
 * [[UsefulAliases]] -- some useful aliases these make your life easier ;)
 * [[SudoWithoutPassword]] -- Giving user grant to execute <b>sudo</b> commands without password 
+* [[LegacyKeyringWarning]] -- Legacy keyring warning removal
 <hr/>
 ==DB==
 ===Postgresql===
