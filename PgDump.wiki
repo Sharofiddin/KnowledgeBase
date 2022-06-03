@@ -1,0 +1,9 @@
+= Getting dump of postgresql db =
+{{{
+pg_dump -v -h <db_host> -p <port> <db_name> -F t -W -U <db_username> > <target>.tar.gz
+}}}
+
+[[index]] -- HomePage
+
+
+
