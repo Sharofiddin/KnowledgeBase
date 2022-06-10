@@ -7,7 +7,10 @@
 === Java ===
 ==== MapperStruct ====
 * [[IgnoringUnmappedProperties]] -- how to ignore unmapped properties to avoid warning?
+==== JDBC ====
 * [[JDBCGeneratedKeys]] -- How to properly retrieve generated keys from jdbc.
+==== Spring ====
+* [[ResourceFileRead]] -- How to read resources/* files in Spring framework.
 <hr/>
 == OS ==
 === Ubuntu ===

@@ -1,0 +1,7 @@
+=Reading resource files=
+
+Eventhough there are plenty ways for reading classpath files. For Spring project it is very easy and convenient to use <i>ResourceUtils</i>:
+{{{
+ResourceUtils.getFile("classpath:myfile");
+}}}
+[[index]] -- HomePage
