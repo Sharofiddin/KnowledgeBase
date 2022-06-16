@@ -6,6 +6,7 @@
 * [[BinarySearch]] -- Binary search algorithm.
 === Java ===
 ==== MapperStruct ====
+* [[MappingByParsing]] -- how to map if you should parse and extract field value?
 * [[IgnoringUnmappedProperties]] -- how to ignore unmapped properties to avoid warning?
 ==== JDBC ====
 * [[JDBCGeneratedKeys]] -- How to properly retrieve generated keys from jdbc.

@@ -1,0 +1,38 @@
+== Mapping by parsing ==
+In some scenarios we have to parse input objects field to map it target's field.<br/>
+Forexample, let's see this two objects
+{{{
+class PersonDTO{
+  private String dateOfBirth;
+	private String name;
+	...
+	}
+	}}}
+	
+	and 
+	{{{
+	  class Person{
+  		private String name;
+	  	private String year;
+	  	private String month;
+	  	private String day;
+		...
+		}
+	}}}
+	
+	In this case, <i>PersonDTO</i>'s  <i>dateOfBirth</i>'s value format is <i>yyyy-MM-dd</i><br/>
+	And we should parse this in order to map <i> Person</i> class's fields (year, month, day).<br/>
+	We can use <i>@Named</i> annotation to write parser for this case:
+	{{{
+		@Named("fromStringToYear")
+	default String fromStringToMonth(String dateOfBirth) {
+		return expiry.split("-")[0];
+	}
+	}}}
+	and we should refer this in <i>@Mapping</i> , like this:
+	{{{
+		@Mapping(source = "dateOfBirth", target = "year", qualifiedByName = "fromStringToYear")
+}}}
+
+So on, so forth. <br/>
+[[index]] -- HomePage
