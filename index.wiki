@@ -8,6 +8,7 @@
 ==== MapperStruct ====
 * [[MappingByParsing]] -- how to map if you should parse and extract field value?
 * [[IgnoringUnmappedProperties]] -- how to ignore unmapped properties to avoid warning?
+* [[LombokConflict]] -- What to do when mapstruct gives error like property not found.
 ==== JDBC ====
 * [[JDBCGeneratedKeys]] -- How to properly retrieve generated keys from jdbc.
 ==== Spring ====
