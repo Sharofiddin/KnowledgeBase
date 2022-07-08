@@ -1,0 +1,13 @@
+= print_r =
+This function prints objects into human-readable string. 
+{{{
+	print_r($object, true/false <return arg>);
+	}}}
+	Second argument identifies whether we want to print object immediately (false), or return string which represents human-readable object. <br/>
+	for logging it should be used something like this:
+	{{{
+	$this->log->write("Result: ".print_r($object, false));
+	}}}
+	Otherwise it will return object in http response.
+	
+	[[index]] -- HomePage

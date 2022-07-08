@@ -1,0 +1,7 @@
+= Java language specifications (1.8) notes =
+* The language written in the Unicode character set.
+* Reference types:
+	* class types
+	* interface types
+	* array types
+* Variable - typed storage location.

@@ -13,6 +13,8 @@
 * [[JDBCGeneratedKeys]] -- How to properly retrieve generated keys from jdbc.
 ==== Spring ====
 * [[ResourceFileRead]] -- How to read resources/* files in Spring framework.
+=== PHP ===
+* [[print_r]] -- human readable print.
 <hr/>
 == OS ==
 === Ubuntu ===
@@ -34,6 +36,7 @@
 <hr/>
 == Books ==
 * [[JavaPerformance]] -- Java Performance By Scott Oaks (2nd edition)
+* [[JLS8]] -- Java language specifications
 <hr/>
 == Servers ==
 === Apache2 ===
@@ -50,6 +53,3 @@
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
 <hr/>
-
-==Must explore==
-[[SMTPAppender]] -- send logging errors by email to admins
