@@ -1,0 +1,18 @@
+= Sharing commong maven projects (Gitlab CI/CD) =
+To share common libs or parent pom only maven projects we should set absolute path of gitlab runner .m2 repository for 
+{{{
+MAVEN_OPTS: "-Dmaven.repo.local=<gitlab runner .m2 absolute path"
+}}} 
+option.
+And don't forget to add local repo to the pom of projects that dependent to common project, like:
+{{{
+<repositories>
+		<repository>
+		<id>com.local</id>
+		<name>Local repo</name>
+		<url>file://${user.home}/.m2/repository</url>
+		</repository>
+  </repositories>
+}}}
+[[index]] -- HomePage
+

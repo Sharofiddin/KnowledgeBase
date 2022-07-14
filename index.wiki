@@ -50,6 +50,8 @@
 * [[NotWorkingKeys]] -- Sometimes your keyboard just doesn't do what you order in vim or terminal.
 ===Eclipse===
 * [[LongPackageNamesInHierarchical]] -- How to fix long package names even in hierarchical package representation;
+=== Git ===
+* [[Gitlab]] - Contents about gitlab.
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
 <hr/>

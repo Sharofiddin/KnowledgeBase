@@ -1,0 +1,5 @@
+= Gitlab CI/CD =
+== Contents ==
+<hr/>
+* [[GitlabCICDSharingCommonMavenProjects]] - sharing common maven proects.
+
