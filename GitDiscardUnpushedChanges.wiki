@@ -1,0 +1,7 @@
+= Discarding unpushed changes =
+To discard unpushed changes from git, use this command:
+{{{
+git reset --hard @{u}
+}}}
+<hr/>
+[[index]] -- HomePage

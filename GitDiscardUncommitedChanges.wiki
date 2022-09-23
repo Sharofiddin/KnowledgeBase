@@ -1,0 +1,8 @@
+= Discarding uncommitted changes from git =
+To discard uncommited changes , type this command: <br>
+{{{
+git checkout .
+}}}
+<hr/>
+[[index]] -- HomePage
+

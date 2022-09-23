@@ -9,12 +9,14 @@
 * [[MappingByParsing]] -- how to map if you should parse and extract field value?
 * [[IgnoringUnmappedProperties]] -- how to ignore unmapped properties to avoid warning?
 * [[LombokConflict]] -- What to do when mapstruct gives error like property not found.
+* [[JavaGenerics]] -- About generic methods and classes.
 ==== JDBC ====
 * [[JDBCGeneratedKeys]] -- How to properly retrieve generated keys from jdbc.
 ==== Spring ====
 * [[ResourceFileRead]] -- How to read resources/* files in Spring framework.
 === PHP ===
 * [[print_r]] -- human readable print.
+* [[magento2]] -- Magento2 CMS
 <hr/>
 == OS ==
 === Ubuntu ===
@@ -41,6 +43,7 @@
 == Servers ==
 === Apache2 ===
 * [[ForbiddenFix]] -- How to fix forbidden error when creatinserver in custom location.
+* [[Magento404StaticFiles]] -- How to fix magento static files not found issue.
 <hr/>
 == Tools ==
 ===Maven===
@@ -52,6 +55,8 @@
 * [[LongPackageNamesInHierarchical]] -- How to fix long package names even in hierarchical package representation;
 === Git ===
 * [[Gitlab]] - Contents about gitlab.
+* [[GitDiscardUnpushedChanges]] - Discarding unpushed changes.
+* [[GitDiscardUncommitedChanges]] - Discarding uncommitted changes.
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
 <hr/>

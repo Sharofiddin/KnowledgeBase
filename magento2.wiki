@@ -1,0 +1,8 @@
+== Magento2 ==
+
+* Disabling 2fa for admin - 
+ {{{ 
+  sudo -u www-data bin/magento module:disable Magento_TwoFactorAuth 
+ }}}
+<hr>
+[[index]] -- index

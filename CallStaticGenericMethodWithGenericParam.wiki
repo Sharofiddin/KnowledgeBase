@@ -1,0 +1,8 @@
+== calling generic method with generic parameter ==
+
+{{{
+Foo.<E>createFoo();
+}}}
+
+<hr>
+[[index]] -- HomePage

@@ -1,0 +1,2 @@
+= Java Generics =
+* [[CallStaticGenericMethodWithGenericParam]] -- Calling gereic method by it's template parameter;

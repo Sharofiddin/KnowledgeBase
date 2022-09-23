@@ -14,7 +14,8 @@ And don't forget to add local repo to the pom of projects that dependent to comm
 		</repository>
   </repositories>
 }}}
-Finally, include local repo in dependant project's .gitlab-ci.yml
+Finally, include local repo in dependant project's .gitlab-ci.yml, before
+`mvn clean package`
 {{{
       - mvn dependency:purge-local-repository -DmanualInclude="com.repo:my-common-repo"
 }}}

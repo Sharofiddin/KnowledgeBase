@@ -1,0 +1,2 @@
+When Magento2 fails to find static files like stylesheets and js, change apache settings in /etc/apache2/apache2.conf <br/>
+change AllowOverride from *None*  to *All*
