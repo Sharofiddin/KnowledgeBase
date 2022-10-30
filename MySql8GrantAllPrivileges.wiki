@@ -1,0 +1,3 @@
+{{{
+GRANT ALL PRIVILEGES ON magento2.* TO 'magento'@'localhost';
+}}}

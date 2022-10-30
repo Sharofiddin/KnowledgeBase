@@ -27,6 +27,8 @@
 * [[LegacyKeyringWarning]] -- Legacy keyring warning removal
 <hr/>
 ==DB==
+===MySql===
+* [[MySql8GrantAllPrivileges]] -- Grant all privileges on database to user;
 ===Postgresql===
 ====Arrays====
 * [[ClearArray]] -- How to remove all elements from array.
@@ -44,6 +46,7 @@
 === Apache2 ===
 * [[ForbiddenFix]] -- How to fix forbidden error when creatinserver in custom location.
 * [[Magento404StaticFiles]] -- How to fix magento static files not found issue.
+* [[HeadersConfiguration]] -- How to enable header configurations for sites.
 <hr/>
 == Tools ==
 ===Maven===

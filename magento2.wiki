@@ -4,5 +4,30 @@
  {{{ 
   sudo -u www-data bin/magento module:disable Magento_TwoFactorAuth 
  }}}
+* Setting deploy mode - 
+{{{
+   bin/magento deploy:mode:set production [or developer]
+}}}
+* For 404 errors - [[https://community.magento.com/t5/Installing-Magento-2-x/Home-page-can-t-show-properly/m-p/132963/highlight/true#M6303]]
+* get admin uri - 
+{{{
+    bin/magento info:adminuri
+}}}
+* properly full restart after module changes
+{{{
+    bin/magento setup:upgrade
+    bin/magento setup:di:compile
+    bin/magento setup:static-content:deploy -f
+    bin/magento cache:clean
+    bin/magento cache:flush
+    
+}}}
+* directory settings - [[https://community.magento.com/t5/Magento-2-x-Technical-Issues/Error-save-products-Interceptor-does-not-exist/td-p/463227]]
+*  secure and unsecure url's must be the same for domain based installion, otherwise admin panel won't be opened :(
+* unlock admin 
+{{{
+    bin/magento admin:user:unlock admin
+}}}
 <hr>
+
 [[index]] -- index
