@@ -28,6 +28,7 @@
 {{{
     bin/magento admin:user:unlock admin
 }}}
+* payment success event *checkout_onepage_controller_success_action*
 <hr>
 
 [[index]] -- index

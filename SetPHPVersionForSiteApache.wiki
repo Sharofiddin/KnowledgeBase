@@ -1,0 +1,9 @@
+If we have multiplse sites running on apache2 server and each of them using different version of php we can specify php version for particular site in apache conf file as following:
+
+{{{bash
+<FilesMatch \.php>
+  SetHandler "proxy:unix:/run/php/php8.1-fpm.sock|fcgi://localhost"
+</FilesMatch>
+
+}}}
+
