@@ -4,6 +4,7 @@
 === Algorithms ===
 * [[Backtracking]] -- Algorithm for find all possible solutions from list.
 * [[BinarySearch]] -- Binary search algorithm.
+* [[BitManipulation]] -- Bit manipulation related tips and tricks.
 === Java ===
 ==== MapperStruct ====
 * [[MappingByParsing]] -- how to map if you should parse and extract field value?

@@ -1,0 +1,11 @@
+== Finding Most Significant Bit of number ==
+ We can find the most significant bit of number with this algoritm:
+ {{{java
+ 	while(n & (n-1) != 0){
+		n &= n - 1;
+	}
+	}}}
+
+Last value assigned to *n* will be most significant bit.
+<hr>
+[[index]] -- Home
