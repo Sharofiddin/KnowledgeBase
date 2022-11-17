@@ -1,0 +1,15 @@
+== ResultSet performance ==
+
+Results fetched by query will be transferred from DB to the Application. There are two things to consider:
+	- All fetched data transferred to APP at once.
+	- DB will fetch data and sends it as rows one-by-one when *next()* called.
+
+But these methods has significant drawbacks:
+  - In the first case, when huge data loaded to APP performance will suffer, and there will be a lot of work for GC.
+	- In the second case, if too many row sent one-by-one from DB to app tehe will be a lot of back-and-forth operations which painful for performance.
+
+For these reasons JDBC drivers has *setFetchSize()* method, it indicates the value which will be loaded from DB to app at once. When working with huge ResultSets you can increase teh fetch size if first `get*()` is slow.
+
+<hr>
+
+* [[index]] -- Home
