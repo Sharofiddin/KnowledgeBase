@@ -1,0 +1,9 @@
+== Index page source n browser ==
+
+If source code of index page appears in browser when you accessing your wordpress site for example: http://localhost:8088 . 
+*Make sure that you enabled rewrite mode:*
+{{{
+  sudo a2enmode rewrite
+  }}}
+  **
+[[index]] -- Home

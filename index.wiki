@@ -19,6 +19,7 @@
 * [[print_r]] -- human readable print.
 * [[magento2]] -- Magento2 CMS
 * [[SetPHPVersionForSiteApache]] -- How to set php version for particular site.
+* [[wordpress]] -- Wordpress CMS.
 <hr/>
 == OS ==
 === Ubuntu ===
