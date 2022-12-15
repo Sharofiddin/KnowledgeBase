@@ -44,6 +44,7 @@
 == Books ==
 * [[JavaPerformance]] -- Java Performance By Scott Oaks (2nd edition)
 * [[JLS8]] -- Java language specifications
+* [[JCIP]] -- Java Concurrency In Practice
 <hr/>
 == Servers ==
 === Apache2 ===

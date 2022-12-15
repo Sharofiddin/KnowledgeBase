@@ -1,0 +1,3 @@
+* Atomicity - Operations A and B are atomic with respect to each other if, form the prespective of thread executiong A, when another thread executes B, either all of B has exeuted ir none of it has.
+* Reentrant lock - when some lock called by one thread multiple times it won't be deadlocked.
+ 
