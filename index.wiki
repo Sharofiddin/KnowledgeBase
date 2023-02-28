@@ -20,6 +20,7 @@
 * [[print_r]] -- human readable print.
 * [[magento2]] -- Magento2 CMS
 * [[SetPHPVersionForSiteApache]] -- How to set php version for particular site.
+* [[wordpress]] -- Wordpress CMS.
 <hr/>
 == OS ==
 === Ubuntu ===
@@ -44,6 +45,7 @@
 == Books ==
 * [[JavaPerformance]] -- Java Performance By Scott Oaks (2nd edition)
 * [[JLS8]] -- Java language specifications
+* [[JCIP]] -- Java Concurrency In Practice
 <hr/>
 == Servers ==
 === Apache2 ===
