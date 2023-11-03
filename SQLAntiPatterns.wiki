@@ -1,0 +1,6 @@
+# SQL Anipatterns Volume 1 Avoiding the Pitfalls of Database Programming
+*Q*: What kind of book is this?
+*A*: This is technical book which expalins common mistakes in using SQL.
+
+
+

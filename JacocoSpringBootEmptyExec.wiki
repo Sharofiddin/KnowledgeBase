@@ -1,0 +1,6 @@
+Once Jacoco generated 0 kb jacoc.exec file from Spring boot project. After enabling/disbaling tests I found that 
+{{{
+  ObjectMapper mapper = Jackson2ObjectMapperBuilder.json().build();
+}}}
+was preventing generation of jacoco.exec but after removing and readding it worked correctly, very starnge...
+

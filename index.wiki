@@ -5,12 +5,13 @@
 * [[Backtracking]] -- Algorithm for find all possible solutions from list.
 * [[BinarySearch]] -- Binary search algorithm.
 * [[BitManipulation]] -- Bit manipulation related tips and tricks.
-=== Java ===
+=== [[Java]] ===
 ==== MapperStruct ====
 * [[MappingByParsing]] -- how to map if you should parse and extract field value?
 * [[IgnoringUnmappedProperties]] -- how to ignore unmapped properties to avoid warning?
 * [[LombokConflict]] -- What to do when mapstruct gives error like property not found.
 * [[JavaGenerics]] -- About generic methods and classes.
+* [[JaCoCo]] -- Java Code Coverage tool.
 ==== JDBC ====
 * [[JDBCGeneratedKeys]] -- How to properly retrieve generated keys from jdbc.
 ==== Spring ====
@@ -46,6 +47,7 @@
 * [[JavaPerformance]] -- Java Performance By Scott Oaks (2nd edition)
 * [[JLS8]] -- Java language specifications
 * [[JCIP]] -- Java Concurrency In Practice
+* [[SQLAntiPatterns]] -- SQL Antipatterns, Volume 1
 <hr/>
 == Servers ==
 === Apache2 ===
