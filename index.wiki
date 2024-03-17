@@ -67,6 +67,8 @@
 * [[Gitlab]] - Contents about gitlab.
 * [[GitDiscardUnpushedChanges]] - Discarding unpushed changes.
 * [[GitDiscardUncommitedChanges]] - Discarding uncommitted changes.
+=== Keycloak ===
+* [[KeycloakIncludeClientScopeInToken]] - Include client scope in token.
 
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
