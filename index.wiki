@@ -1,5 +1,7 @@
 = 786/Knowledge Base =
 
+== Islam ==
+* [[ImamShubaShajara]]  -- Tree of Imam Shooba Quran hifz
 == Programming ==
 === Algorithms ===
 * [[Backtracking]] -- Algorithm for find all possible solutions from list.
