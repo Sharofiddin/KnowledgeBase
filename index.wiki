@@ -71,7 +71,8 @@
 * [[GitDiscardUncommitedChanges]] - Discarding uncommitted changes.
 === Keycloak ===
 * [[KeycloakIncludeClientScopeInToken]] - Include client scope in token.
-
+== [[Architecture]] ==
+* [[GregorHohpeRecommendedBooks]] - Gregor Hohpe recommended books.
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
 <hr/>
