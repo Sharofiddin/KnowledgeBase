@@ -76,3 +76,4 @@
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
 <hr/>
+* [[UzbekRareDictionary]] -- uzbek rare dictionary rakovina qo'lyuvgich chanoq
