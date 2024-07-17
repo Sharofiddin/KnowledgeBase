@@ -2,6 +2,7 @@
 
 == Islam ==
 * [[ImamShubaShajara]]  -- Tree of Imam Shooba Quran hifz
+* [[TasavvufShajara]] -- Tasavvuf shajara
 == Programming ==
 === Algorithms ===
 * [[Backtracking]] -- Algorithm for find all possible solutions from list.
