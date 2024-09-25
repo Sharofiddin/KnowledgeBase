@@ -74,6 +74,7 @@
 * [[KeycloakIncludeClientScopeInToken]] - Include client scope in token.
 == [[Architecture]] ==
 * [[GregorHohpeRecommendedBooks]] - Gregor Hohpe recommended books.
+* [[ArchitectureOrDesign]] - factors to take account to distinguish between architecture and design.
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
 <hr/>
