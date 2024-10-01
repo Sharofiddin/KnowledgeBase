@@ -1,5 +1,8 @@
 = 786/Knowledge Base =
 
+== Islam ==
+* [[ImamShubaShajara]]  -- Tree of Imam Shooba Quran hifz
+* [[TasavvufShajara]] -- Tasavvuf shajara
 == Programming ==
 === Algorithms ===
 * [[Backtracking]] -- Algorithm for find all possible solutions from list.
@@ -29,6 +32,7 @@
 * [[UsefulAliases]] -- some useful aliases these make your life easier ;)
 * [[SudoWithoutPassword]] -- Giving user grant to execute <b>sudo</b> commands without password 
 * [[LegacyKeyringWarning]] -- Legacy keyring warning removal
+* [[TcpdumpMonitorPort]] -- monitor the port with tcpdump
 <hr/>
 ==DB==
 ===MySql===
@@ -68,6 +72,12 @@
 * [[GitDiscardUncommitedChanges]] - Discarding uncommitted changes.
 === tcpdump ===
 * [[TcpdumpMonitorPort]] -- port monitoring
+=== Keycloak ===
+* [[KeycloakIncludeClientScopeInToken]] - Include client scope in token.
+== [[Architecture]] ==
+* [[GregorHohpeRecommendedBooks]] - Gregor Hohpe recommended books.
+* [[ArchitectureOrDesign]] - factors to take account to distinguish between architecture and design.
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
 <hr/>
+* [[UzbekRareDictionary]] -- uzbek rare dictionary
