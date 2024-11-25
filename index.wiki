@@ -77,5 +77,7 @@
 * [[ArchitectureOrDesign]] - factors to take account to distinguish between architecture and design.
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
+==Electronics==
+* [[ElectronicsAbbreviations]] - Electronics abbrs.
 <hr/>
 * [[UzbekRareDictionary]] -- uzbek rare dictionary
