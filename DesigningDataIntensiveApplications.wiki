@@ -1,0 +1,52 @@
+Book focuses on these key concerns:
+  * Reliability
+	* Scalability
+	* Maintainability
+  
+Data models:
+  * Relational
+  * Document
+  * Graph
+  
+Storage engines:
+ * Log structured
+ * Page oriented
+ 
+ Logs in general - append-only sequence of records.
+ Pros:
+   * Fast read(with in-memory hashmap index)/write
+	 * Recovery .No update - no possibility of mixture of old data and new data in one record.
+	 * No fragmented files if merge used.
+
+Cons:
+   * Very large number of keys causes huge RAM consumption.
+	 * Range queries are not effective. If values for keys between `key10` and `key99` are requested for each key value will be fetched.
+
+Index types:
+  * LSMTree(Log Structured Merge Tree)
+  * B-Tree(Balanced Tree)
+B-Tree:
+  * B-Tree uses pages (or blocks) to store keys, references and values.
+  * WAL (Write-Ahead-Log) used for crash recovery.
+  * Reference count in one page named `branching factor`
+  * Abbrevating keys saves space and causes high **branching factor**, so fewer levels, and this makes search faster.
+
+`Write amplification` - one write to database causes multiple writes.
+
+LSMTree vs B-Tree:
+  * LSMTree faster write, it has lower `write amplification` than B-Tree. When B-Tree page fill it will be splitted to two new pages, and parent page keeps references to new children. This causes higher write amplification.
+
+...
+
+Index has key and value. Key is the thing queries search for. For example ID, or name (if indexed). But value can be :
+  1. actual row(document in mongodb, vertex in neo4j)
+  2. reference to the row(document, vertex) stored elsewhere.
+In second case, place that rows are stored is known as a `heap file`. Heap file is good to keep changes in one place. But when referenced heap location changed all indexes should be updated to point new location.
+If indexed row directly stored with row (first case) it named `clustered index`
+Other indexing structures:
+  * multi-column indexes (R-Tree).
+  ...
+
+NVM - Non-volatile memory.
+
+  

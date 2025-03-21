@@ -51,6 +51,7 @@
 * [[JLS8]] -- Java language specifications
 * [[JCIP]] -- Java Concurrency In Practice
 * [[SQLAntiPatterns]] -- SQL Antipatterns, Volume 1
+* [[DesigningDataIntensiveApplications]] -- Designing data-intensive applications
 <hr/>
 == Servers ==
 === Apache2 ===
