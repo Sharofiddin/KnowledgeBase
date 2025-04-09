@@ -1,8 +1,9 @@
+= Overall =
 Book focuses on these key concerns:
   * Reliability
 	* Scalability
 	* Maintainability
-  
+
 Data models:
   * Relational
   * Document
@@ -21,7 +22,7 @@ Storage engines:
 Cons:
    * Very large number of keys causes huge RAM consumption.
 	 * Range queries are not effective. If values for keys between `key10` and `key99` are requested for each key value will be fetched.
-
+== Indexes ==
 Index types:
   * LSMTree(Log Structured Merge Tree)
   * B-Tree(Balanced Tree)
@@ -49,4 +50,22 @@ Other indexing structures:
 
 NVM - Non-volatile memory.
 
-  
+= Replication =
+
+Why we replicate data:
+ * To keep data geographically close to users.
+ * To allow system to operate when some of its parts failed.
+ * To scale out the number of machines that can serve to read queries (increase throughput)
+
+** Popular replicating algorithms: **
+ * single-leader
+ * multi-leader
+ * leaderless
+
+== Leader based replication == 
+
+When we replicate database, every write should processed by every replica to avoid data inconsistency between replicas. *Leader based replication* or _master-slave replication_ is the most common solution for it.
+It works as follows:
+  1. One of the replicas is designated as _leader_ (master/primary). Clients sends write requests to the leader. Leader first writes the new data to its local storage.
+  2. The other replicas are knows as _followers (read replicas, slaves, secondaries, or hot standbys)_. Whenever the leader writes new data to its local storage, it also sends the data change to all of its followers as part of a _replication log_ or _change stream_. Each follower takes the log from the leader and updates it local copy of the DB accordingly, by applying all writes in the same order as they were processed on the leader
+  3. .
