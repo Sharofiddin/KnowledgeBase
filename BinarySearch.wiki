@@ -1,2 +1,2 @@
-== Binary search algorith m==
+== Binary search algorith ==
 [[index]] -- HomePage

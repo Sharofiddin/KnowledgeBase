@@ -84,3 +84,5 @@
 * [[ElectronicsAbbreviations]] - Electronics abbrs.
 <hr/>
 * [[UzbekRareDictionary]] -- uzbek rare dictionary
+* [[WebLinks]] -- Some linkes I found interesting.
+
