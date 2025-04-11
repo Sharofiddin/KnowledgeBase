@@ -16,7 +16,7 @@ Storage engines:
  Logs in general - append-only sequence of records.
  Pros:
    * Fast read(with in-memory hashmap index)/write
-	 * Recovery .No update - no possibility of mixture of old data and new data in one record.
+	 * Recovery. No update - no possibility of mixture of old data and new data in one record.
 	 * No fragmented files if merge used.
 
 Cons:
@@ -57,7 +57,7 @@ Why we replicate data:
  * To allow system to operate when some of its parts failed.
  * To scale out the number of machines that can serve to read queries (increase throughput)
 
-** Popular replicating algorithms: **
+ *Popular replicating algorithms:*
  * single-leader
  * multi-leader
  * leaderless
@@ -68,4 +68,8 @@ When we replicate database, every write should processed by every replica to avo
 It works as follows:
   1. One of the replicas is designated as _leader_ (master/primary). Clients sends write requests to the leader. Leader first writes the new data to its local storage.
   2. The other replicas are knows as _followers (read replicas, slaves, secondaries, or hot standbys)_. Whenever the leader writes new data to its local storage, it also sends the data change to all of its followers as part of a _replication log_ or _change stream_. Each follower takes the log from the leader and updates it local copy of the DB accordingly, by applying all writes in the same order as they were processed on the leader
-  3. .
+  3. When client initiates read request it can be served by on of the standbys or leader. But, writes are only accepted on the leader. The followers are read-only from the client's point of view.
+
+== Synchronous vs Asynchronous replication ==
+
+
