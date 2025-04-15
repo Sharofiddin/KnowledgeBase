@@ -19,6 +19,10 @@
 * [[JDBCGeneratedKeys]] -- How to properly retrieve generated keys from jdbc.
 ==== Spring ====
 * [[ResourceFileRead]] -- How to read resources/* files in Spring framework.
+==== Quarkus ==== 
+===== Dev services =====
+* [[QuarkusDevServicesOIDCKeycloak]] - OIDC and Keycloak
+
 === PHP ===
 * [[print_r]] -- human readable print.
 * [[magento2]] -- Magento2 CMS
@@ -66,6 +70,7 @@
 * [[VimOverallSettings]] -- General settings and plugins for vim.
 * [[GenerateHtmlForAllVimwiki]] -- How to generate for all of your vimwiki pages.
 * [[NotWorkingKeys]] -- Sometimes your keyboard just doesn't do what you order in vim or terminal.
+* [[VimChooseFromAutocomplete]] -- Choosing word from autocomplete.
 ===Eclipse===
 * [[LongPackageNamesInHierarchical]] -- How to fix long package names even in hierarchical package representation;
 === Git ===

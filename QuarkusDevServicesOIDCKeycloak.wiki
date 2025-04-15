@@ -1,0 +1,20 @@
+= Quarkus dev services: OIDC and keycloak =
+
+== Keycloak container starting problem ==
+
+When dev service oidc enabled by:
+
+{{{properties
+quarkus.oidc.devservices.enabled=true
+}}}
+
+Quarkus won't start keycloak container. If we want to start kc container, we should remove `quarkus.oidc.devservices.enabled` and add following:
+{{{properties
+quarkus.keycloak.devservices.enabled=true
+}}}
+
+This appeared in quarkus version `3.21.2`
+<hr>
+
+[[index]] -- Home
+
