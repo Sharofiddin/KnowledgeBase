@@ -1,5 +1,5 @@
 == Choose your word from autocomplete in Vim ==
 
-When vim autocomplete gives you multiple suggesstions, you can not choose one of them only by pressing _Enter_ button. If you do this smth annoying happens. So go your choice by arrows and press *`CTRL+y`* and thank me later. ))
+When vim autocomplete gives you multiple suggesstions, you can not choose one of them only by pressing _Enter_ button. If you do this smth annoying happens. So go your choice by arrows and press *CTRL+y* and thank me later. ))
 
 [[index]] -- Home

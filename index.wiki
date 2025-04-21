@@ -62,6 +62,9 @@
 * [[ForbiddenFix]] -- How to fix forbidden error when creatinserver in custom location.
 * [[Magento404StaticFiles]] -- How to fix magento static files not found issue.
 * [[HeadersConfiguration]] -- How to enable header configurations for sites.
+
+== Cloud ==
+* [[AWS]] -- Amazon Web Services
 <hr/>
 == Tools ==
 ===Maven===
