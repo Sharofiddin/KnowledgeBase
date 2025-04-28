@@ -76,8 +76,16 @@ It works as follows:
 Let's say we have one *leader* and two *replicas* for user management system. At some point in time, client requests *the leader* to update some user's profile image. Request recieved by the leaeder after short time it was sent. At some point, the leader forwards data change to followers. Eventually, the leader notifies the client that the update was successfull. What happens if the leader sends update to the first replica synchronously and to the second asynchronously? The leader waits the first replica's confirmation about recieving the update successfully before notifying to the client, but no second's. 
   Usually, replication is fast (less than a second). But there is no guarante of how long it takes. It take several minutes in some cases: when replica is recovering from failuer, network problems between nodes, OS near maximum capacity. In these cases, asynchronously replicated follower may fall behind the leader by several minutes. On the otherhand, the synchronously replicated follower will block the leader from finishing the operation.
   Synchronous replication:
-    Advantages:
+    - Advantages:
       * Up to date data with the Leader. Even, if the leader fails, all successfully written data is still available on the follower.
-    Disadvantages:
+    - Disadvantages:
       * If the follower does not respond (crashed, network error,...), the write can not be processed. The leader must block all writes until the synchronous is available again.
-  For this shortcomin, it is impractical to make all followers synchronous: If one of them fallen, the whole system stops operating.
+  For this shortcoming, it is impractical to make all followers synchronous: If one of them fallen, the whole system stops operating. In practice: One of the followers is made synchronous. If synchronous followers fails or slows down, one of the asynchronous followers is made synchronous and we alwasy have two nodes with _up to date_ data: The leader and the synchronous follower. This configuration sometimes called _semi-synchronous_.
+  
+== Adding new followers ==
+
+  Adding new followers to the cluster is not always straight forward task. We can not just copy and paste leader's data into new replica server. Because during data transfer process the leader my accept new writes. Or, the leader should be locked until new replica gets all data. But we want to do it without downtime:
+  1. Take a consistent snapshot of the leader's database at some point in time-, if possible, without taking a lock on entire database. Most databases have thi feature, as it also required for backups.
+  2. Copy the snapshot to the new follower node.
+  3. The follower connects to the leader and requests all the data changes since snapshot was taken.
+  4. When the follower has processed the backlog of data changes since snapshot, it is called _caught up_. Now, it can continue to process data changes from the leader as they happen.
