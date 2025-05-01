@@ -7,5 +7,7 @@
 * Split vertically `C-b "`
 * Switch between panes: `C-b <arrow>`
 * Zoom/unzoom pane: `C-b z`
+* Switch to scroll mode: `C-b <PageUp or PageDown>`
+* Quit scroll mode: `C-b q`
 
 [[index]] -- index
