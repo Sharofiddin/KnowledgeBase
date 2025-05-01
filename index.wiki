@@ -74,6 +74,8 @@
 * [[GenerateHtmlForAllVimwiki]] -- How to generate for all of your vimwiki pages.
 * [[NotWorkingKeys]] -- Sometimes your keyboard just doesn't do what you order in vim or terminal.
 * [[VimChooseFromAutocomplete]] -- Choosing word from autocomplete.
+===Tmux===
+* [[TmuxUsefulKeyBindings]] -- Some useful keybindings in Tmux.
 ===Eclipse===
 * [[LongPackageNamesInHierarchical]] -- How to fix long package names even in hierarchical package representation;
 === Git ===

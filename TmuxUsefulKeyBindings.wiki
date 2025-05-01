@@ -1,0 +1,11 @@
+= Useful keybindings in Tmux =
+
+* Create new tab: `C-b c` 
+* Rename the tab: `C-b ,`
+* Show all tabs: `C-b w`
+* Split horizontally `C-b %`
+* Split vertically `C-b "`
+* Switch between panes: `C-b <arrow>`
+* Zoom/unzoom pane: `C-b z`
+
+[[index]] -- index
