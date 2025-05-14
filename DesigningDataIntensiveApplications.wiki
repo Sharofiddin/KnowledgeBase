@@ -89,3 +89,11 @@ Let's say we have one *leader* and two *replicas* for user management system. At
   2. Copy the snapshot to the new follower node.
   3. The follower connects to the leader and requests all the data changes since snapshot was taken.
   4. When the follower has processed the backlog of data changes since snapshot, it is called _caught up_. Now, it can continue to process data changes from the leader as they happen.
+
+...
+
+== Problems with replication lag ==
+
+* _read-after-write consistency_ == _read-your-writes consistency_ - it ensures that if user reloads the page, they will always see any updates they submitted themselves, no promise about other user's update.
+* _monotonic reads_ - let's say we have one leader and two replicas, user_1 added new comment, user_2 read this comment from replica_1, but when he refreshed page comment disappeared because this time user_2 read data from replica_2 which has not updated data yet. Monotonic reads guarantees that there is nothis kind of situation, by routing each user to exact datacenter whenever he reads data.
+* 
