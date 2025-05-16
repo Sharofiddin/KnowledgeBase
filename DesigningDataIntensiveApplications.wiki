@@ -123,3 +123,21 @@ Let's say we have one *leader* and two *replicas* for user management system. At
   _Real time collaborative editing_ apps allow several people to edit a document simultaneously like Google Docs.
   
 === Handling Write Conflicts ===
+
+...
+
+=== Multi-Leader Replication Topologies ===
+
+If Multi-Leader replication only has two leaders, it is trivial topology: both of them send writes to another and receive it. But when we have more than two Leaders, we have different topologies:
+  * circle
+  * star
+  * all-to-all
+
+In circle, each Leader nor recieves writes from one Leader node and sends writes (it's own and received from prior Leader) to other Leader.
+In start topology, there is one Leader node which forwards all writes from other Leaders. It can be generalized to Tree topology.
+All-to-all - each Leader sends writes to all other Leader nodes.
+
+Cirlce and Star topologies are more prone to Single-Point-Of-failure.
+All-to-all is fault tolerant but in ordering is complex problem in this topology.
+
+=== Leaderless replication ===
