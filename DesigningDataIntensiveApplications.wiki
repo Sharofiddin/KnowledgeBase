@@ -141,3 +141,12 @@ Cirlce and Star topologies are more prone to Single-Point-Of-failure.
 All-to-all is fault tolerant but in ordering is complex problem in this topology.
 
 === Leaderless replication ===
+
+==== Writing to the Database When a Node Is Down ====
+  _n_ - Replication Factor: In leaderless replication the replication factor n is the number of nodes to store a replica of particular pieco of data. Total number of nodes in cluster can be greater from _n_. In this case, read and write nodes may or may not be overlapped. 
+==== Limitations of Quorum Consistency ====
+ _Anti-entropy_ - background process that compares data between nodes and detects and fixes inconsistencies. It is proactive process which periodically runs. In contrast, _read-repair_ is reactive process only checks inconsistencies when data accessed for read. 
+
+==== Sloppy Quorums and Hinted Handoff ====
+
+==== Detecting Concurrent Writes ====
