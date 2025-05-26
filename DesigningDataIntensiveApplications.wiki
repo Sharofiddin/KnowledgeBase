@@ -142,6 +142,8 @@ All-to-all is fault tolerant but in ordering is complex problem in this topology
 
 === Leaderless replication ===
 
+  _Clients send each write to several nodes, and read from several nodes in parallel in order to detect and correct nodes with stale data._
+  
 ==== Writing to the Database When a Node Is Down ====
   _n_ - Replication Factor: In leaderless replication the replication factor n is the number of nodes to store a replica of particular pieco of data. Total number of nodes in cluster can be greater from _n_. In this case, read and write nodes may or may not be overlapped. 
 ==== Limitations of Quorum Consistency ====
@@ -150,3 +152,11 @@ All-to-all is fault tolerant but in ordering is complex problem in this topology
 ==== Sloppy Quorums and Hinted Handoff ====
 
 ==== Detecting Concurrent Writes ====
+
+  In leaderless replication, recognizing what is concurrent write and what is overwrite is one of the important problems. Usually, versions are used for this task. In short, if client submits previous version in write than it is overwrite for older version, else it is concurrent writing. But, with more replicas the situation is not that simple.
+ ...
+
+Note: Amazon Dynamo systme is not DynamoDB. Yes, I was also confused.
+
+
+== 6. Partitioning ==
