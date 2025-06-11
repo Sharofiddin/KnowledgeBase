@@ -160,3 +160,34 @@ Note: Amazon Dynamo systme is not DynamoDB. Yes, I was also confused.
 
 
 == 6. Partitioning ==
+Partitioning or Sharding is breaking apart data into partitions.
+
+=== Partitioning and Replication ===
+
+  Partitioning is counterpart of Replication. One node can contain both Leader and Follower partitions.
+  
+=== Partitioning of Key-Value Data ===
+
+==== Partitioning by Key Range ====
+  Unfair partitioning - e.g. some partitions have more data or queries than others, also called _skewed_.
+...
+==== Partitioning by Hash of Key ====
+  Java's `Object.hashCode()` is not suitable for distrubuted systems, as same object can have different hash values when object is complex object. For this reason, sharded databases should use more reliable hashing algorithms, not necessarily cryptographically strong. For example: Cassandra uses Murmur3. 
+
+==== Skewed Workloads and Relieving Hot Spots
+  Hashing wont solve skewing workload problems fully. In social networks celebrities have a lot of subscribers so a lot of posts/replies/comments. So, as each user as its own ID and hash for this ID everytime produces some output. It will cause to skewed workloads again in nodes where data of these celebritiesproblems fully. In social networks celebrities have a lot of subscribers so a lot of posts/replies/comments. So, as each user as its own ID and hash for this ID everytime produces some output. It will cause to skewed workloads stored. One workaroun: adding random one two digits after user_id (or whatever partitioning key), but this leads to query every partition for these records in read, and also some bookkeeping required: we shouldn't do this trick for ordinary users, this also adds some overhead.
+
+=== Partitioning and Secondary Indexes ===
+
+  Primary indexes are not always sufficient, let's suppose we have actions table with primary key action_id, and we also have `user_id` column which we want to add index for it. Secondary index column need not to be unique. Not all partitioned datastores adopted _secondary indexes_ (HBase, Voldemort). But Riak KV added it to its features. And for search servers like Solr and Elasticsearch _secondary indexes_ are must have. 
+  Secondary index don't map neatly with partitions. There two approaches for partitioning databases with secondary indexes:
+    * document based partitioning
+    * term-based partitioning
+
+==== Partitioning secondary Indexes by Document ====
+
+
+
+
+[[index]] -- index
+

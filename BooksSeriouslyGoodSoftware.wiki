@@ -1,0 +1,16 @@
+= Part 1. Preliminaries =
+
+== Chapter 1. Software qualities and a problem to solve ==
+
+=== 1.1. Software qualities ===
+
+==== 1.1.1. Internal vs. external qualities ====
+
+* External - users directly see it.
+* Internal - you can only appraise it after looking to the source code.
+
+==== 1.1.2. Functional vs. nonfunctional qualities ====
+ * Functional - what the software does? - All external
+ * Non-functional - how the software is? - Can be external or internal
+ 
+ 

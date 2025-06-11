@@ -56,6 +56,7 @@
 * [[JCIP]] -- Java Concurrency In Practice
 * [[SQLAntiPatterns]] -- SQL Antipatterns, Volume 1
 * [[DesigningDataIntensiveApplications]] -- Designing data-intensive applications
+* [[BooksSeriouslyGoodSoftware]] -- Seriously Good Software
 <hr/>
 == Servers ==
 === Apache2 ===
