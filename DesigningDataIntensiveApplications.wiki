@@ -156,7 +156,7 @@ All-to-all is fault tolerant but in ordering is complex problem in this topology
   In leaderless replication, recognizing what is concurrent write and what is overwrite is one of the important problems. Usually, versions are used for this task. In short, if client submits previous version in write than it is overwrite for older version, else it is concurrent writing. But, with more replicas the situation is not that simple.
  ...
 
-Note: Amazon Dynamo systme is not DynamoDB. Yes, I was also confused.
+Note: Amazon Dynamo system is not DynamoDB. Yes, I was also confused.
 
 
 == 6. Partitioning ==
