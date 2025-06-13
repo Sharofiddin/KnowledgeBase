@@ -186,7 +186,25 @@ Partitioning or Sharding is breaking apart data into partitions.
 
 ==== Partitioning secondary Indexes by Document ====
 
+  In this approach secondary indexes are local, it means each partition has its own secondary indexes and it doesn't care about other partitions. One downside of this approach: when reading we should check every partition because this approach won't guarante that records with one secondary index (for example "color:red" ) stored in one partition or exact some partitions. 
+    This approach to querying a partitioned database is sometimes known as scatter/gather, and it can make read queries on secondary index quite expensive.
+==== Partitioning Secondary Indexes by Term ====
 
+  In this approach we have a global index that covers data in all partitions. Seconday index itself also should be partitioned. Read is faster than scatter/gather but writes are slover and more complex, requires distributed transactions.
+
+=== Rebalancing partitions ===
+
+  Sometimes things change in database:
+    * We need more CPU for processing queries
+    * We should handle huge datasets so we need more RAM
+    * Some nodes failed so we should add new nodes for their responsibilities.
+  
+  In these cases we should move data and requests from one node to another, and this called _rebalancing_. Rebalancing minimum requirements:
+    * After rebalancing, the load should be shared fairly between the nodes in the cluster.
+    * While rebalancing is happening, the database continue accepting reads and writes.
+    * No more data than necessary should be moved between nodes.
+
+==== Strategies for Rebalancing ====
 
 
 [[index]] -- index
