@@ -206,6 +206,26 @@ Partitioning or Sharding is breaking apart data into partitions.
 
 ==== Strategies for Rebalancing ====
 
+...
+
+=== Operations: Automatic or Manual Rebalancing
+  
+  Full automatic rebalancing mixed with automatic failure detection can be very dangerous. Because if some nodes are overloaded other nodes conclude overloaded node as dead node, and automatic rebalancing process starts to move load away from it. This puts additional load on the overloaded node, other nodes and network - resulting cascading failure which is worse.
+
+=== Request Routing ===
+
+  ...
+
+==== Parallel Query execution ====
+
+  ...
+
+=== Summary ===
+
+  ...
+
+== 7. Transactions == 
+
 
 [[index]] -- index
 
