@@ -20,3 +20,8 @@
 ...
 
 == 2.2. Memory requirements == 
+
+  Three factors render the exact size of an object dependent on the architecture and even on the JDK vendor:
+    * Reference size
+  	* Object headers
+  	* Padding
