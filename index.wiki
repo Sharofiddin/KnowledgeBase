@@ -70,8 +70,11 @@
 == Tools ==
 ===Maven===
 * [[InstallJarToLocalRepo]] -- How to intsall jar files for only one project
+
+=== curl ===
+* [[CurlScripts]] - Some interesting curl scripts.
 ===Nmap===
-[[Nmap]] -- useful nmap scripts
+* [[Nmap]] -- useful nmap scripts
 ===Vim===
 * [[VimOverallSettings]] -- General settings and plugins for vim.
 * [[GenerateHtmlForAllVimwiki]] -- How to generate for all of your vimwiki pages.
