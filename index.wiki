@@ -3,6 +3,8 @@
 == Islam ==
 * [[ImamShubaShajara]]  -- Tree of Imam Shooba Quran hifz
 * [[TasavvufShajara]] -- Tasavvuf shajara
+* [[RisalatulMustarshidiyn]] -- Risalatul Mustarshidiyn kitobidan qaydlar.
+ 
 == Programming ==
 === Algorithms ===
 * [[Backtracking]] -- Algorithm for find all possible solutions from list.
