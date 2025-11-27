@@ -2,3 +2,5 @@
 * Qoida: Bilmaganingni toki bilguningcha so'rab o'rganishdan uyalma. Bilmagan narsang sendan so'ralganda bilmadim deb javob berishdan uyalma.
 * Johillar jim turishganida odamlar rohatlanardi.
 * Ilm - bir narsani voqe'likda qanday bo'lsa shundayligicha jazm bilan bilish.
+* Taqvo - oxiratda zarar beradigan narsalardan tiyilish.
+* Vara'a - oxiratga foyda bermaydigan narsalardan tiyilish.
