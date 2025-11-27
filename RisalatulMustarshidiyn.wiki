@@ -1,4 +1,4 @@
-* Imom - qaysidir ilmda o'sha ilmni ahllari uning ko'rsatmasi bilan ish ko'radigan odam.
+* Imom - qaysidir ilmda o'sha ilmni ahllari unga ergashadigan odam.
 * Qoida: Bilmaganingni toki bilguningcha so'rab o'rganishdan uyalma. Bilmagan narsang sendan so'ralganda bilmadim deb javob berishdan uyalma.
 * Johillar jim turishganida odamlar rohatlanardi.
 * Ilm - bir narsani voqe'likda qanday bo'lsa shundayligicha jazm bilan bilish.
