@@ -59,6 +59,7 @@
 * [[SQLAntiPatterns]] -- SQL Antipatterns, Volume 1
 * [[DesigningDataIntensiveApplications]] -- Designing data-intensive applications
 * [[BooksSeriouslyGoodSoftware]] -- Seriously Good Software
+* [[BooksSREWithJavaMicroservices]] -- SRE with Java microservices
 <hr/>
 == Servers ==
 === Apache2 ===
