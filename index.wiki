@@ -71,7 +71,8 @@
 * [[GitDiscardUncommitedChanges]] - Discarding uncommitted changes.
 === Keycloak ===
 * [[KeycloakIncludeClientScopeInToken]] - Include client scope in token.
-
+=== Hacking ===
+* [[ToolsHackingArpspoof]] - arpspoof
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
 <hr/>
