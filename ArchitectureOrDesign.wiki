@@ -1,0 +1,5 @@
+= Distinction between architecture and design =
+1. Significance of trade-offs
+3. Strategical or tactical
+4. Level of effort
+[[index]] -- Home

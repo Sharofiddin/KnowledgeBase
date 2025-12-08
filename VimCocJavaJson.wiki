@@ -1,0 +1,13 @@
+Contents of  _~/.vim/coc-settings.json_
+
+{{{json
+
+{
+    "java.jdt.ls.java.home": "/home/sharofiddin/.sdkman/candidates/java/current",
+    "java.jdt.ls.lombokSupport.enabled": true,
+    "java.jdt.ls.vmargs": "-javaagent:/home/sharofiddin/dev-tools/lombok-1.18.36.jar"
+}
+
+}}}
+
+[[index]] -- Home

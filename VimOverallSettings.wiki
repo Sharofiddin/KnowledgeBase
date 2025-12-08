@@ -1,0 +1,6 @@
+== General settings and plugins for vim ==
+
+* [[VimOverAllSettingsRc]] -- .vimrc  
+* [[VimCocJavaJson]] -- _coc-settings.json_ for java
+
+[[index]] -- Home

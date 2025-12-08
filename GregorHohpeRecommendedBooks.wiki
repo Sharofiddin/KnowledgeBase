@@ -1,0 +1,3 @@
+Gregor Hohpe recommened books for architect:
+{{local:images/gregor_hohpe_rec_books.jpg}}
+[[index]] - home

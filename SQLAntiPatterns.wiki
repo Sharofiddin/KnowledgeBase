@@ -3,4 +3,4 @@
 *A*: This is technical book which expalins common mistakes in using SQL.
 
 
-
+[[index]](Index)

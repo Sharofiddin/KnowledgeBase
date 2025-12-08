@@ -1,0 +1,10 @@
+* Advanced Nmap Recon + Grep Filtering + Banner Fingerprinting
+  
+{{{shell
+sudo nmap -n -Pn -sS -sV -p80 --open --script=banner -T5 192.168.7.0/24 -oG - | grep 'open' | grep -v 'tcpwrapped'
+}}}
+   * Try replacing -p80 with -p- for full port sweep
+   * Add --script=http-title or --script=http-headers to pull juicy intel
+	 Original from X @TheMsterDoctor1
+
+[[index]] -- Home

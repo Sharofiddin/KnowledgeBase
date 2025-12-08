@@ -1,0 +1,231 @@
+= Overall =
+Book focuses on these key concerns:
+  * Reliability
+	* Scalability
+	* Maintainability
+
+Data models:
+  * Relational
+  * Document
+  * Graph
+  
+Storage engines:
+ * Log structured
+ * Page oriented
+ 
+ Logs in general - append-only sequence of records.
+ Pros:
+   * Fast read(with in-memory hashmap index)/write
+	 * Recovery. No update - no possibility of mixture of old data and new data in one record.
+	 * No fragmented files if merge used.
+
+Cons:
+   * Very large number of keys causes huge RAM consumption.
+	 * Range queries are not effective. If values for keys between `key10` and `key99` are requested for each key value will be fetched.
+== Indexes ==
+Index types:
+  * LSMTree(Log Structured Merge Tree)
+  * B-Tree(Balanced Tree)
+B-Tree:
+  * B-Tree uses pages (or blocks) to store keys, references and values.
+  * WAL (Write-Ahead-Log) used for crash recovery.
+  * Reference count in one page named `branching factor`
+  * Abbrevating keys saves space and causes high **branching factor**, so fewer levels, and this makes search faster.
+
+`Write amplification` - one write to database causes multiple writes.
+
+LSMTree vs B-Tree:
+  * LSMTree faster write, it has lower `write amplification` than B-Tree. When B-Tree page fill it will be splitted to two new pages, and parent page keeps references to new children. This causes higher write amplification.
+
+...
+
+Index has key and value. Key is the thing queries search for. For example ID, or name (if indexed). But value can be :
+  1. actual row(document in mongodb, vertex in neo4j)
+  2. reference to the row(document, vertex) stored elsewhere.
+In second case, place that rows are stored is known as a `heap file`. Heap file is good to keep changes in one place. But when referenced heap location changed all indexes should be updated to point new location.
+If indexed row directly stored with row (first case) it named `clustered index`
+Other indexing structures:
+  * multi-column indexes (R-Tree).
+  ...
+
+NVM - Non-volatile memory.
+
+= Replication =
+
+Why we replicate data:
+ * To keep data geographically close to users.
+ * To allow system to operate when some of its parts failed.
+ * To scale out the number of machines that can serve to read queries (increase throughput)
+
+ *Popular replicating algorithms:*
+ * single-leader
+ * multi-leader
+ * leaderless
+
+== Leader based replication == 
+
+When we replicate database, every write should processed by every replica to avoid data inconsistency between replicas. *Leader based replication* or _master-slave replication_ is the most common solution for it.
+It works as follows:
+  1. One of the replicas is designated as _leader_ (master/primary). Clients sends write requests to the leader. Leader first writes the new data to its local storage.
+  2. The other replicas are knows as _followers (read replicas, slaves, secondaries, or hot standbys)_. Whenever the leader writes new data to its local storage, it also sends the data change to all of its followers as part of a _replication log_ or _change stream_. Each follower takes the log from the leader and updates it local copy of the DB accordingly, by applying all writes in the same order as they were processed on the leader
+  3. When client initiates read request it can be served by on of the standbys or leader. But, writes are only accepted on the leader. The followers are read-only from the client's point of view.
+
+== Synchronous vs Asynchronous replication ==
+
+  Whether replication happens synchronously or asynchronously is important detail of replicated system. In relational database it is usually configurable option; in other systems it is often hardcoded.
+Let's say we have one *leader* and two *replicas* for user management system. At some point in time, client requests *the leader* to update some user's profile image. Request recieved by the leaeder after short time it was sent. At some point, the leader forwards data change to followers. Eventually, the leader notifies the client that the update was successfull. What happens if the leader sends update to the first replica synchronously and to the second asynchronously? The leader waits the first replica's confirmation about recieving the update successfully before notifying to the client, but no second's. 
+  Usually, replication is fast (less than a second). But there is no guarante of how long it takes. It take several minutes in some cases: when replica is recovering from failuer, network problems between nodes, OS near maximum capacity. In these cases, asynchronously replicated follower may fall behind the leader by several minutes. On the otherhand, the synchronously replicated follower will block the leader from finishing the operation.
+  Synchronous replication:
+    - Advantages:
+      * Up to date data with the Leader. Even, if the leader fails, all successfully written data is still available on the follower.
+    - Disadvantages:
+      * If the follower does not respond (crashed, network error,...), the write can not be processed. The leader must block all writes until the synchronous is available again.
+  For this shortcoming, it is impractical to make all followers synchronous: If one of them fallen, the whole system stops operating. In practice: One of the followers is made synchronous. If synchronous followers fails or slows down, one of the asynchronous followers is made synchronous and we alwasy have two nodes with _up to date_ data: The leader and the synchronous follower. This configuration sometimes called _semi-synchronous_.
+  
+== Adding new followers ==
+
+  Adding new followers to the cluster is not always straight forward task. We can not just copy and paste leader's data into new replica server. Because during data transfer process the leader my accept new writes. Or, the leader should be locked until new replica gets all data. But we want to do it without downtime:
+  1. Take a consistent snapshot of the leader's database at some point in time-, if possible, without taking a lock on entire database. Most databases have thi feature, as it also required for backups.
+  2. Copy the snapshot to the new follower node.
+  3. The follower connects to the leader and requests all the data changes since snapshot was taken.
+  4. When the follower has processed the backlog of data changes since snapshot, it is called _caught up_. Now, it can continue to process data changes from the leader as they happen.
+
+...
+
+== Problems with replication lag ==
+
+* _read-after-write consistency_ == _read-your-writes consistency_ - it ensures that if user reloads the page, they will always see any updates they submitted themselves, no promise about other user's update.
+* _monotonic reads_ - let's say we have one leader and two replicas, user_1 added new comment, user_2 read this comment from replica_1, but when he refreshed page comment disappeared because this time user_2 read data from replica_2 which has not updated data yet. Monotonic reads guarantees that there is nothis kind of situation, by routing each user to exact datacenter whenever he reads data.
+* _consistent prefix reads_ ...
+
+== Multi-Leader replication ==
+
+  In single-leader replication if app can not connect to the leader it can not write to the database. If we have more than one leader connection problem with one leader won't stop us from writing to the database. It is called a _multi-leader_ configuration. Also known as master-master or active/active replication. Each leader simultaneously acts as a follower to the other leaders.
+
+=== Use cases for multi-leader replication ===
+
+==== Multi-datacenter operation ====
+  
+  When we have single-leader setup with multiple datacenter, all writes go to the single leader, so any issue with leader's datacenter will stop all writes eventhough other datacenters operating normally, and synchronous replication can be serious bottleneck if sync-replica is in different datacenter from leader's. These issues of single-leader configuration dimnish advantages of multi-dataceneter setup.
+  Advantages of multi-leader:
+    * Performance
+    * Tolerance of datacenter outage
+    * Tolerance of network problems
+  Big Downside:
+    * Concurrent update of data requires "conflict resolution".
+
+==== Clients with offline operation ====
+
+  When application should work even it is disconnected from internet, multi-leader replication can be useful. Like calendar apps. Even your phone is offline you can see calendar and can mark some days for some events, when your gained access to the internet again your calendar reconsile its data with server. In this extreme case each device with your account is leader. 
+
+==== Collaborative editing ====
+
+  _Real time collaborative editing_ apps allow several people to edit a document simultaneously like Google Docs.
+  
+=== Handling Write Conflicts ===
+
+...
+
+=== Multi-Leader Replication Topologies ===
+
+If Multi-Leader replication only has two leaders, it is trivial topology: both of them send writes to another and receive it. But when we have more than two Leaders, we have different topologies:
+  * circle
+  * star
+  * all-to-all
+
+In circle, each Leader nor recieves writes from one Leader node and sends writes (it's own and received from prior Leader) to other Leader.
+In start topology, there is one Leader node which forwards all writes from other Leaders. It can be generalized to Tree topology.
+All-to-all - each Leader sends writes to all other Leader nodes.
+
+Cirlce and Star topologies are more prone to Single-Point-Of-failure.
+All-to-all is fault tolerant but in ordering is complex problem in this topology.
+
+=== Leaderless replication ===
+
+  _Clients send each write to several nodes, and read from several nodes in parallel in order to detect and correct nodes with stale data._
+  
+==== Writing to the Database When a Node Is Down ====
+  _n_ - Replication Factor: In leaderless replication the replication factor n is the number of nodes to store a replica of particular pieco of data. Total number of nodes in cluster can be greater from _n_. In this case, read and write nodes may or may not be overlapped. 
+==== Limitations of Quorum Consistency ====
+ _Anti-entropy_ - background process that compares data between nodes and detects and fixes inconsistencies. It is proactive process which periodically runs. In contrast, _read-repair_ is reactive process only checks inconsistencies when data accessed for read. 
+
+==== Sloppy Quorums and Hinted Handoff ====
+
+==== Detecting Concurrent Writes ====
+
+  In leaderless replication, recognizing what is concurrent write and what is overwrite is one of the important problems. Usually, versions are used for this task. In short, if client submits previous version in write than it is overwrite for older version, else it is concurrent writing. But, with more replicas the situation is not that simple.
+ ...
+
+Note: Amazon Dynamo system is not DynamoDB. Yes, I was also confused.
+
+
+== 6. Partitioning ==
+Partitioning or Sharding is breaking apart data into partitions.
+
+=== Partitioning and Replication ===
+
+  Partitioning is counterpart of Replication. One node can contain both Leader and Follower partitions.
+  
+=== Partitioning of Key-Value Data ===
+
+==== Partitioning by Key Range ====
+  Unfair partitioning - e.g. some partitions have more data or queries than others, also called _skewed_.
+...
+==== Partitioning by Hash of Key ====
+  Java's `Object.hashCode()` is not suitable for distrubuted systems, as same object can have different hash values when object is complex object. For this reason, sharded databases should use more reliable hashing algorithms, not necessarily cryptographically strong. For example: Cassandra uses Murmur3. 
+
+==== Skewed Workloads and Relieving Hot Spots
+  Hashing wont solve skewing workload problems fully. In social networks celebrities have a lot of subscribers so a lot of posts/replies/comments. So, as each user as its own ID and hash for this ID everytime produces some output. It will cause to skewed workloads again in nodes where data of these celebritiesproblems fully. In social networks celebrities have a lot of subscribers so a lot of posts/replies/comments. So, as each user as its own ID and hash for this ID everytime produces some output. It will cause to skewed workloads stored. One workaroun: adding random one two digits after user_id (or whatever partitioning key), but this leads to query every partition for these records in read, and also some bookkeeping required: we shouldn't do this trick for ordinary users, this also adds some overhead.
+
+=== Partitioning and Secondary Indexes ===
+
+  Primary indexes are not always sufficient, let's suppose we have actions table with primary key action_id, and we also have `user_id` column which we want to add index for it. Secondary index column need not to be unique. Not all partitioned datastores adopted _secondary indexes_ (HBase, Voldemort). But Riak KV added it to its features. And for search servers like Solr and Elasticsearch _secondary indexes_ are must have. 
+  Secondary index don't map neatly with partitions. There two approaches for partitioning databases with secondary indexes:
+    * document based partitioning
+    * term-based partitioning
+
+==== Partitioning secondary Indexes by Document ====
+
+  In this approach secondary indexes are local, it means each partition has its own secondary indexes and it doesn't care about other partitions. One downside of this approach: when reading we should check every partition because this approach won't guarante that records with one secondary index (for example "color:red" ) stored in one partition or exact some partitions. 
+    This approach to querying a partitioned database is sometimes known as scatter/gather, and it can make read queries on secondary index quite expensive.
+==== Partitioning Secondary Indexes by Term ====
+
+  In this approach we have a global index that covers data in all partitions. Seconday index itself also should be partitioned. Read is faster than scatter/gather but writes are slover and more complex, requires distributed transactions.
+
+=== Rebalancing partitions ===
+
+  Sometimes things change in database:
+    * We need more CPU for processing queries
+    * We should handle huge datasets so we need more RAM
+    * Some nodes failed so we should add new nodes for their responsibilities.
+  
+  In these cases we should move data and requests from one node to another, and this called _rebalancing_. Rebalancing minimum requirements:
+    * After rebalancing, the load should be shared fairly between the nodes in the cluster.
+    * While rebalancing is happening, the database continue accepting reads and writes.
+    * No more data than necessary should be moved between nodes.
+
+==== Strategies for Rebalancing ====
+
+...
+
+=== Operations: Automatic or Manual Rebalancing
+  
+  Full automatic rebalancing mixed with automatic failure detection can be very dangerous. Because if some nodes are overloaded other nodes conclude overloaded node as dead node, and automatic rebalancing process starts to move load away from it. This puts additional load on the overloaded node, other nodes and network - resulting cascading failure which is worse.
+
+=== Request Routing ===
+
+  ...
+
+==== Parallel Query execution ====
+
+  ...
+
+=== Summary ===
+
+  ...
+
+== 7. Transactions == 
+
+
+[[index]] -- index
+

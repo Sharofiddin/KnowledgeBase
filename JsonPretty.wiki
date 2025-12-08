@@ -1,7 +1,9 @@
 =Json pretty=
 To pretty print jsonb in postgresql use <i>jsonb_pretty</i>:</br>
-{{{
+{{{sql
+
 select jsonb_pretty('{"a":1, "b":2}'::jsonb);
+
 }}}
 <br/>
 <b>P.S. this is very good for pgcli/psql</b><br/>

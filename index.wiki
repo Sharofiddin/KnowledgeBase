@@ -2,6 +2,9 @@
 
 == Islam ==
 * [[ImamShubaShajara]]  -- Tree of Imam Shooba Quran hifz
+* [[TasavvufShajara]] -- Tasavvuf shajara
+* [[RisalatulMustarshidiyn]] -- Risalatul Mustarshidiyn kitobidan qaydlar.
+ 
 == Programming ==
 === Algorithms ===
 * [[Backtracking]] -- Algorithm for find all possible solutions from list.
@@ -18,6 +21,10 @@
 * [[JDBCGeneratedKeys]] -- How to properly retrieve generated keys from jdbc.
 ==== Spring ====
 * [[ResourceFileRead]] -- How to read resources/* files in Spring framework.
+==== Quarkus ==== 
+===== Dev services =====
+* [[QuarkusDevServicesOIDCKeycloak]] - OIDC and Keycloak
+
 === PHP ===
 * [[print_r]] -- human readable print.
 * [[magento2]] -- Magento2 CMS
@@ -50,29 +57,54 @@
 * [[JLS8]] -- Java language specifications
 * [[JCIP]] -- Java Concurrency In Practice
 * [[SQLAntiPatterns]] -- SQL Antipatterns, Volume 1
+* [[DesigningDataIntensiveApplications]] -- Designing data-intensive applications
+* [[BooksSeriouslyGoodSoftware]] -- Seriously Good Software
 <hr/>
 == Servers ==
 === Apache2 ===
 * [[ForbiddenFix]] -- How to fix forbidden error when creatinserver in custom location.
 * [[Magento404StaticFiles]] -- How to fix magento static files not found issue.
 * [[HeadersConfiguration]] -- How to enable header configurations for sites.
+
+== Cloud ==
+* [[AWS]] -- Amazon Web Services
 <hr/>
 == Tools ==
 ===Maven===
 * [[InstallJarToLocalRepo]] -- How to intsall jar files for only one project
+
+=== curl ===
+* [[CurlScripts]] - Some interesting curl scripts.
+===Nmap===
+* [[Nmap]] -- useful nmap scripts
 ===Vim===
+* [[VimOverallSettings]] -- General settings and plugins for vim.
 * [[GenerateHtmlForAllVimwiki]] -- How to generate for all of your vimwiki pages.
 * [[NotWorkingKeys]] -- Sometimes your keyboard just doesn't do what you order in vim or terminal.
+* [[VimChooseFromAutocomplete]] -- Choosing word from autocomplete.
+===Tmux===
+* [[TmuxUsefulKeyBindings]] -- Some useful keybindings in Tmux.
 ===Eclipse===
 * [[LongPackageNamesInHierarchical]] -- How to fix long package names even in hierarchical package representation;
 === Git ===
 * [[Gitlab]] - Contents about gitlab.
 * [[GitDiscardUnpushedChanges]] - Discarding unpushed changes.
 * [[GitDiscardUncommitedChanges]] - Discarding uncommitted changes.
+=== tcpdump ===
+* [[TcpdumpMonitorPort]] -- port monitoring
 === Keycloak ===
 * [[KeycloakIncludeClientScopeInToken]] - Include client scope in token.
 === Hacking ===
 * [[ToolsHackingArpspoof]] - arpspoof
+
+== [[Architecture]] ==
+* [[GregorHohpeRecommendedBooks]] - Gregor Hohpe recommended books.
+* [[ArchitectureOrDesign]] - factors to take account to distinguish between architecture and design.
 ==Methods==
 * [[OccamsRazor]] -- Simplest first.
+==Electronics==
+* [[ElectronicsAbbreviations]] - Electronics abbrs.
 <hr/>
+* [[UzbekRareDictionary]] -- uzbek rare dictionary
+* [[WebLinks]] -- Some linkes I found interesting.
+

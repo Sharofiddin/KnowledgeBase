@@ -1,0 +1,27 @@
+= Part 1. Preliminaries =
+
+== Chapter 1. Software qualities and a problem to solve ==
+
+=== 1.1. Software qualities ===
+
+==== 1.1.1. Internal vs. external qualities ====
+
+* External - users directly see it.
+* Internal - you can only appraise it after looking to the source code.
+
+==== 1.1.2. Functional vs. nonfunctional qualities ====
+ * Functional - what the software does? - All external
+ * Non-functional - how the software is? - Can be external or internal
+ 
+...
+
+== Chapter 2. Reference implementation ==
+
+...
+
+== 2.2. Memory requirements == 
+
+  Three factors render the exact size of an object dependent on the architecture and even on the JDK vendor:
+    * Reference size
+  	* Object headers
+  	* Padding

@@ -1,0 +1,6 @@
+* Download images from web page:
+	 {{{
+	   curl -s https://iiau.uz/oz | grep -Eo 'src="[^"]+\.jpg' | awk -F '"' '{print $2}' | xargs -n 1 wget
+	 }}}
+
+[[index]] -- Home
