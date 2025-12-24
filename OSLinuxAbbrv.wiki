@@ -1,0 +1,4 @@
+
+su - `switch user` not `super user`, we think it's a super user because by default it switches to `root`.
+
+[[index]] -- Index

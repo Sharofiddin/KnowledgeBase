@@ -32,8 +32,10 @@
 * [[wordpress]] -- Wordpress CMS.
 <hr/>
 == OS ==
-=== Ubuntu ===
-==== Jammy Jellyfish ====
+=== Linux ===
+* [[OSLinuxAbbrv]] - Linux abbrevations
+==== Ubuntu ====
+===== Jammy Jellyfish =====
 * [[WaylandProblemWithEclipse]] -- eclipse devstyle issue in Wayland.
 * [[UsefulAliases]] -- some useful aliases these make your life easier ;)
 * [[SudoWithoutPassword]] -- Giving user grant to execute <b>sudo</b> commands without password 
