@@ -62,6 +62,7 @@
 * [[DesigningDataIntensiveApplications]] -- Designing data-intensive applications
 * [[BooksSeriouslyGoodSoftware]] -- Seriously Good Software
 * [[BooksSREWithJavaMicroservices]] -- SRE with Java microservices
+* [[CoreJava13Volume2]] -- Core Java 13th edition Volume II
 <hr/>
 == Servers ==
 === Apache2 ===

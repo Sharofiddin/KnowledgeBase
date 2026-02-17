@@ -1,0 +1,8 @@
+== IO ==
+
+* AutoCloseable.close can throw any exception, whereas Closeable.close can only throw IOException
+Closeable interface extends AutoCloseable
+
+* Print Writers are always buffered. We can enable autoflushing explicitily.
+
+[[index]] -- Home
