@@ -64,6 +64,7 @@
 * [[BooksSeriouslyGoodSoftware]] -- Seriously Good Software
 * [[BooksSREWithJavaMicroservices]] -- SRE with Java microservices
 * [[CoreJava13Volume2]] -- Core Java 13th edition Volume II
+* [[37ThingsGregorHohpe]] -- 37 Things One Architect knows about IT Transformation.
 <hr/>
 == Servers ==
 === Apache2 ===

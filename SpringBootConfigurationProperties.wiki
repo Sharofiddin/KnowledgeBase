@@ -1,3 +1,3 @@
-	* If IDE don't "understand" , tests and app can not load {{{@ConfiggurationProperties}}} annoted class bound properties from application.yml or application.properties, you should add properties-processor to annotation-processors `<path>`
+	* If IDE don't "understand" , tests and app can not load `@ConfiggurationProperties` annoted class bound properties from application.yml or application.properties, you should add properties-processor to annotation-processors `<path>`
 
 [[index]] -- Home
