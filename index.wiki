@@ -21,6 +21,7 @@
 * [[JDBCGeneratedKeys]] -- How to properly retrieve generated keys from jdbc.
 ==== Spring ====
 * [[ResourceFileRead]] -- How to read resources/* files in Spring framework.
+* [[SpringBootConfigurationProperties]] -- Some issues and solutions, tips and tricks.
 ==== Quarkus ==== 
 ===== Dev services =====
 * [[QuarkusDevServicesOIDCKeycloak]] - OIDC and Keycloak
