@@ -1,0 +1,4 @@
+* Expression smth returns value like `a+b`
+* Statement changes control, changes state but doesn't return any value like `if(a>b)`
+
+[[index]] -- Index

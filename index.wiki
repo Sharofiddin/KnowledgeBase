@@ -6,6 +6,8 @@
 * [[RisalatulMustarshidiyn]] -- Risalatul Mustarshidiyn kitobidan qaydlar.
  
 == Programming ==
+=== Basics ===
+* [[ProgBasicExpressionVsStatement]] -- Expression vs Statement
 === Algorithms ===
 * [[Backtracking]] -- Algorithm for find all possible solutions from list.
 * [[BinarySearch]] -- Binary search algorithm.

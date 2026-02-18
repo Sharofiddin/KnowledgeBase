@@ -1,3 +1,6 @@
 * **System thinking** - thinking about behavior not structure. Struture is just way to achieve desired behavior.
-
+* Simple things should be simple, complex things should be possible.
+* "I generally apply two tests when vendors provide a demo of visual programming tools:
+  * I ask them to enter a typo into one of the fields where the user is expected to enter some logic. Often this leads to cryptic error messages or obscure errors in generated code down the line. I call this “tightrope programming”: as long as you stay exactly on the line, everything is well. One misstep and the deep abyss awaits you.
+  * I ask them to leave the room for 2 minutes while we change a few random elements of their demo configuration. Upon return, they would have to debug and figure out what was changed. No vendor was ever willing to take the challenge."
 [[index]] -- Index
