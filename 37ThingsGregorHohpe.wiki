@@ -5,5 +5,6 @@
   * I ask them to leave the room for 2 minutes while we change a few random elements of their demo configuration. Upon return, they would have to debug and figure out what was changed. No vendor was ever willing to take the challenge."
   * Detecting vendor's world map:
      "Discussing what base assumptions and decisions are baked into a product gives great insight into a vendor’s world map. Asking them about the toughest problem they had to solve when developing their product tells you much about where the center of their map is located."
-   
+* Graphical user interfaces for infrastructure configuration, which vendors often like to show off, should be banned because they don’t integrate well into a software lifecycle, aren’t testable, and are error prone.   
+* Blatant typos or grammar issues are like the proverbial fly in the soup: the taste is arguably the same, but the customer is unlikely to come back for more.
 [[index]] -- Index

@@ -5,5 +5,6 @@ Closeable interface extends AutoCloseable
 
 * Print Writers are always buffered. We can enable autoflushing explicitily.
 * You should not use the `File` class except to interface with legacy code. (Instead use `Path`)
-
+* There is a small risk with serializing inner classes if you intend to have them deserialized with a different Java implementation. Static inner classes, including inner enumerations and records, are safe to serialize.
+* Never call overridable methods from constructor nor from readObject() of Serailizable classes.
 [[index]] -- Home
